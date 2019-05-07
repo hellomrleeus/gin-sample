@@ -14,7 +14,7 @@ spec:
         template: stress
   - name: verify
     container:
-      image: ymian/busybox
+      image: busybox
       command: [sh, -c]
       args: ["
         x=`curl http://webdemo.default.svc.cluster.local:3000/stress/3 -w '%{size_download}' -so /dev/null`;
