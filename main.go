@@ -45,7 +45,7 @@ func main() {
 	})
 
 	if *havedb {
-		host := "galera-lb"
+		host := os.Getenv("MYSQL_HOST")
 		user := os.Getenv("MYSQL_USER")
 		passwd := os.Getenv("MYSQL_PASSWORD")
 		database := os.Getenv("MYSQL_DATABASE")
