@@ -35,7 +35,7 @@ pipeline {
                 - cat
                 tty: true
               - name: busybox
-                image: ymian/busybox
+                image: busybox:latest
                 command:
                 - cat
                 tty: true
