@@ -9,6 +9,6 @@ export MYSQL_HOST=my-pxc
 export MYSQL_PORT=3306
 export MYSQL_DATABASE=demo
 export MYSQL_USER=root
-export MYSQL_PASSWD=li123456
+export MYSQL_PASSWORD=li123456
 
 exec ./gin-sample -logtostderr -v 2

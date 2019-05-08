@@ -17,6 +17,13 @@ pipeline {
                 command:
                 - cat
                 tty: true
+              - name: busybox
+                image: busybox
+                command:
+                - cat
+                tty: true
+              volumes:
+              - name: jenkinscicd
             """
         }
     }
@@ -25,8 +32,10 @@ pipeline {
             steps {
                 container('golang') {
                     sh 'go version'
-                    sh 'pwd'
-                    sh 'go build -x'
+                    sh 'ls -la'
+                }
+                container('busybox') { 
+                    sh 'ls -la'
                 }
             }
         }
