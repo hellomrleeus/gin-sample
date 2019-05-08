@@ -25,6 +25,8 @@ pipeline {
             steps {
                 container('golang') {
                     sh 'go version'
+                    sh 'pwd'
+                    sh 'go build -x'
                 }
             }
         }
